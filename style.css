@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+
+/* CSS para o cabeÃ§alho e a navegaÃ§Ã£o */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgb(0, 110, 201);
+  size: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.espacoheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgb(0, 110, 201);
+  size: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+body {
+  size: 100vh;
+  font-family: 'Rubik', sans-serif;
+  font-size: large;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  /* alinha os itens verticalmente */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 2em;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav a:hover {
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.desktop-menu {
+  display: block;
+}
+
+.banner {
+  position: absolute;
+  top: 30%;
+  left: 2.5%;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.banner h1 {
+  margin-bottom: 0.5em;
+  font-size: 2.9em;
+  font-weight: bold;
+}
+
+.banner h2 {
+  margin-bottom: 0.5em;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+
+.banner p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.button-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 0.25vh 6vw;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.button-whatsapp:hover {
+  background-color: #128C7E;
+}
+
+.animated-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, ease 1s;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CSS para as seÃ§Ãµes principais */
+main {
+  padding: 2em;
+  margin: auto 20vh auto 20vh;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 15vh;
+  margin-top: 15vh;
+}
+
+section h1 {
+  margin-bottom: 0.5em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.box h1 {
+  margin-bottom: 0.5em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+section h2 {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+section p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+section ul {
+  list-style: none;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.cidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 35vh;
+  padding: 2vh;
+  margin: 2.5vh;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  min-width: 15vw;
+  max-width: fit-content;
+  flex: 1 0 200px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card button {
+  bottom: 0;
+}
+
+section button {
+  background-color: #000f42;
+  color: #fff;
+  border: none;
+  padding: 4% 25%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 20vh;
+  background: -webkit-linear-gradient(left,
+      rgba(0, 15, 66, 0) 0%,
+      rgba(0, 15, 66, 0.8) 20%,
+      rgba(0, 15, 66, 1) 53%,
+      rgba(0, 15, 66, 0.8) 79%,
+      rgba(0, 15, 66, 0) 100%);
+  background: linear-gradient(left,
+      rgba(0, 15, 66, 0) 0%,
+      rgba(0, 15, 66, 0.8) 20%,
+      rgba(0, 15, 66, 1) 53%,
+      rgba(0, 15, 66, 0.8) 79%,
+      rgba(0, 15, 66, 0) 100%);
+  grid-column: 1/-1;
+}
+
+#apresentacao {
+  display: grid;
+}
+
+.card button:hover {
+  background-color: #cfd0e6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+
+#texto,
+#texto2,
+#texto3,
+#texto4,
+#texto5,
+#texto6,
+#texto7,
+#texto8,
+#texto9,
+#texto10,
+#texto11,
+#texto12,
+#texto13 {
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+
+.perguntas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: left;
+}
+
+.box {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.box p {
+  padding: 1vh;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#overlay img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* CSS para o rodapÃ© */
+footer {
+  background-color: rgb(0, 110, 201);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+
+}
+
+.arrow {
+  height: 2.5vh;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.arrow.clicked {
+  transform: rotate(180deg);
+}
+
+
+
+.whatsapp-button {
+  display: block;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  height: 10vh;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: fit-content;
+    min-width: 15vw;
+    flex: 1 0 200px;
+  }
+
+  .banner {
+    color: #132B92;
+  }
+
+  .card p {
+    font-size: 0.6em;
+  }
+
+  .card h2 {
+    font-size: 0.8em;
+  }
+
+  .cidades {
+    column-count: 3;
+  }
+
+}
+
+/* CSS para telas menores, como celulares */
+@media only screen and (max-width: 900px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  #dropdown-container {
+    position: relative;
+    margin-right: 4.6vw;
+  }
+
+  .dropdown-content {
+    max-width: 100vw;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(0, 110, 201);
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    text-align: center;
+    animation: fade-in 0.5s ease;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    color: #fff;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+
+  .menumobile a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    color: #fff;
+  }
+
+  .menumobile a:last-child {
+    border-bottom: none;
+  }
+
+  .menumobile {
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(0, 110, 201);
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fade-in 0.5s ease;
+  }
+
+  .bannermobile {
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(0, 110, 201);
+    top: 25%;
+    left: 2.5%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .bannermobile h1 {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .bannermobile h2 {
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  .bannermobile p {
+    font-size: 0.6em;
+  }
+
+  main {
+    padding: 2em;
+    margin: auto 2vh auto 2vh;
+    text-align: center;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  section h1 {
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .box h1 {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  section h2 {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  section p {
+    font-size: 0.8em;
+  }
+
+  nav {
+    margin-top: 20px;
+    font-size: 0.6em;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: auto;
+  }
+
+  section {
+    max-height: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: fit-content;
+    min-width: 25vw;
+    flex: 1 0 200px;
+
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+
+  .card h2 {
+    font-size: 0.9em;
+  }
+
+  section button {
+    background-color: #cfd0e6;
+    font-size: 0.6em;
+  }
+
+  .perguntas {
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .box {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #apresentacao {
+    width: fit-content;
+    display: unset;
+  }
+
+  .perguntas h1 {
+    font-size: 1.3em;
+  }
+
+  section::after {
+    margin-top: 3vh;
+  }
+
+  footer {
+    font-size: 0.6em;
+    text-align: left;
+  }
+
+  footer p {
+    margin: 0 7.5vh 0 0;
+  }
+
+  .whatsapp-button {
+    bottom: 1.5vh;
+    right: 1.5vh;
+    height: 10vh;
+  }
+
+  .cidades {
+    column-count: 1;
+  }
+}

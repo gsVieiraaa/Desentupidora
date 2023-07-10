@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Precisa Desentupidora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="Foto de Perfil Escura.png" sizes="16x16" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API"></script>
+</head>
+
+<body>
+
+    <header>
+        <img style="height: 7.5vh; cursor: pointer" src="logo.png" alt="Logo da Empresa" onclick="scrollToTop()" />
+        <nav class="desktop-menu">
+            <ul>
+
+                <li><a href="#?servicos">Serviços</a></li>
+
+                <li>
+                    <a href="ATUALIZAR">Sobre Nós</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="dropdown mobile-menu" id="dropdown-container">
+            <a target="_blank"><img src="logomenu.png" alt="Logo do WhatsApp"
+                    style="object-fit: contain; width: 2.5vh" /></a>
+            <div class="dropdown-content">
+                <a href="#servicos">Serviços</a>
+                <a href="ATUALIZAR">Sobre Nós</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="espacoheader">
+        <!-- sem uso especifico, só para manter responsivo e contornar o espaço do fixed -->
+
+        <img style="height: 7.5vh; cursor: pointer" src="logo.png" alt="Logo da Empresa" onclick="scrollToTop()" />
+        <nav class="desktop-menu">
+            <ul>
+
+                <li><a href="#servicos">Serviços</a></li>
+
+                <li>
+                    <a href="ATUALIZAR">Sobre Nós</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dropdown mobile-menu" id="dropdown-container">
+            <a target="_blank"><img src="logomenu.png" alt="Logo menu" style="object-fit: contain; width: 2.5vh" /></a>
+            <div class="dropdown-content">
+                <a href="#servicos">Serviços</a>
+                <a href="ATUALIZAR">Sobre Nós</a>
+            </div>
+        </div>
+    </div>
+    <!--<div class="menumobile" style="display: none;">
+        <div>
+            <a href="#servicos">Planos e Preços</a>
+            <a href="ATUALIZAR">Sobre Nós</a>
+        </div>
+    </div> -->
+    <div class="bannermobile mobile-menu">
+        <div class="animated-element">
+            <h1>
+                Mais de 30 anos de Mercado!</h1>
+            <p>Desentupidora em Brasilia/DF<br>
+                Desentupidora em Geral<br>
+                <h2>Visita Técnica gratuita!</h2>
+            </p>
+            <div style="align-items: center;
+                justify-content: space-between;
+                padding: 1em;
+                text-align: center;">
+                <a href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                    class="button-whatsapp" target="_blank"><img src="wppbanner.png" style="width: 6vh;padding: 1vh;">
+                </a><br />
+                <a class="button-whatsapp" href="tel:+556199425-2500" class=""><img src="telefonebanner.png"
+                        style="width: 6vh; padding: 1vh;"></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="desktop-menu">
+        <img src="banner.png" alt="bannerempresa" width="100%">
+        <div class="banner animated-element">
+            <h1>
+                Mais de 30 anos de Mercado!</h1>
+            <p>Desentupidora em Brasilia/DF<br>
+                Desentupidora em Geral<br>
+                <h2>Visita Técnica gratuita!</h2>
+            </p>
+            <div style="align-items: center;
+                justify-content: space-between;
+                padding: 1em;
+                text-align: left;">
+                <a href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                    class="button-whatsapp" target="_blank"><img src="wppbanner.png" style="width: 6vh;padding: 1vh;">
+                </a><br />
+                <a class="button-whatsapp" href="tel:+556199425-2500" class=""><img src="telefonebanner.png"
+                        style="width: 6vh; padding: 1vh;"></a>
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <section id="servicos" class="primeirotitulo animated-element" style="margin-bottom: 0">
+            <h1>Conheça nossos serviços:</h1>
+
+            <div>
+                <div class="container animated-element">
+
+                    <div class="card" onclick="toggleText('texto')" style="cursor: pointer">
+                        <img src="vaso.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de vasos sanitários</h2>
+                        <div id="texto" style="text-align: justify">
+                            <p>
+                                Realizamos a desobstrução por meio de equipamentos modernos, removendo toda sujeira sem
+                                a necessidade de quebrar pisos ou azulejos.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="card" onclick="toggleText('texto2')" style="cursor: pointer">
+                        <img src="pia.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de pias e tanques</h2>
+                        <div id="texto2" style="text-align: justify">
+                            <p>
+                                Realizamos a raspagem e higienização dos ramais, removendo toda sujeira, desobstruindo o
+                                encaminhamento e normalizando o fluxo de água.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="toggleText('texto3')" style="cursor: pointer">
+                        <img src="ralo.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de ralos</h2>
+                        <div id="texto3" style="text-align: justify">
+                            <p>
+                                Examinamos o local exato da obstrução, após a localização realizamos a desobstrução do
+                                encanamento, removendo toda sujeira sem a necessidade de quebrar pisos ou azulejos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="toggleText('texto4')" style="cursor: pointer">
+                        <img src="esgoto.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de redes de esgoto</h2>
+                        <div id="texto4" style="text-align: justify">
+                            <p>
+                                Para o Desentupimento na rede de esgoto das residências, comércio e indústria e
+                                necessário usar o melhor equipamento com a melhor tecnologia, além de profissionais
+                                treinados. Uma rede de esgoto obstruída pode ser causa de imensos problemas para os
+                                proprietários.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="toggleText('texto5')" style="cursor: pointer">
+                        <img src="caixa.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de caixa de gordura</h2>
+                        <div id="texto5" style="text-align: justify">
+                            <p>
+                                A caixa de gordura e fundamental para que a gordura e os detritos originados da cozinha
+                                não sejam levados aos efluentes. Se esse item não estiver funcionando corretamente pode
+                                provocar entupimentos de grandes proporções trazendo incomodo e dor de cabeça.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="toggleText('texto6')" style="cursor: pointer">
+                        <img src="pluvial.png" alt="Icon" width="100vh" />
+                        <h2>Desentupimento de rede pluvial</h2>
+                        <div id="texto6" style="text-align: justify">
+                            <p>
+                                Realizamos a raspagem e higienização dos ramais, removendo toda sujeira, desobstruindo o
+                                encaminhamento e normalizando o fluxo de água.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desktop-menu">
+
+                    </div>
+                    <div class="card" onclick="toggleText('texto7')" style="cursor: pointer">
+                        <img src="hidrojateamento.png" alt="Icon" width="100vh" />
+                        <h2>Hidrojateamento</h2>
+                        <div id="texto7" style="text-align: justify">
+                            <p>
+                                Desentupimento com hidrojato remove o acumulo de matérias incrustados através de jato de
+                                água de alta Pressão. Sem danificar a tubulação, Ideal para área de saneamento básico,
+                                desobstrução de rede de esgoto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="animated-element">
+            <h1>Nossos Diferenciais:</h1>
+            <div style="
+          margin-top: 10vh;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-gap: 30px;
+        " id="apresentacao" class="animated-element">
+
+                <div>
+                    <img src="visita.png" alt="Icon" width="110vh" style="margin-bottom: 5vh" />
+                    <h2>Visita técnica gratuita</h2>
+                    <p>
+                        Receba Uma Visita Tecnica Totalmente Grátis, Para Orçamento e Trabalho Imediato!
+                    </p>
+                </div>
+                <div>
+                    <img src="Relógio.png" alt="Icon" width="110vh" style="margin-bottom: 5vh" />
+                    <h2>Serviço rápido</h2>
+                    <p>
+                        Nós sabemos que uma emergência de entupimento não escolhe a hora de acontecer, por isso nosso
+                        serviço é 24 horas e estamos sempre alertas para atender seus chamados com agilidade e resolver
+                        seu problema no menor tempo possível.
+                    </p>
+                </div>
+                <div>
+                    <img src="Segurança.png" alt="Icon" width="110vh" style="margin-bottom: 5vh" />
+                    <h2>
+                        Serviço de qualidade
+                    </h2>
+                    <p>
+                        Tudo que fazemos é executado com muita dedicação para que seus problemas de entupimento e esgoto
+                        sejam solucionados de uma vez por todas.
+
+                        Temos capacidade técnica e os equipamentos corretos para cada tipo de procedimento, garantindo a
+                        qualidade do serviço prestado.
+                    </p>
+                </div>
+                <div>
+                    <img src="Economia.png" alt="Icon" width="110vh" style="margin-bottom: 5vh" />
+                    <h2>Preço justo</h2>
+                    <p>
+                        Prestar um bom serviço não precisa ser sinônimo de valores exorbitantes.
+
+                        Aqui praticamos valores justos e oferecemos opções variadas e convenientes de pagamento.
+                        Aceitamos cartão de crédito, pix e transferência.
+                    </p>
+                </div>
+        </section>
+        </section>
+
+
+        <section class="animated-element">
+            <div class="perguntas">
+                <div>
+                    <h1>Onde estamos localizados?</h1>
+                </div>
+                <div class="box animated-element">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61336.52279137546!2d-48.06296492134095!3d-16.08972265885301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359847212701563%3A0x4215e06987627415!2zVmFscGFyYcOtc28gZGUgR29pw6FzLCBHTw!5e0!3m2!1spt-BR!2sbr!4v1688683297045!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="animated-element">
+            <h1>Atendemos em todo o DF e em torno:</h1>
+            <div class="card" onclick="toggleText('texto13')"
+                style="cursor: pointer; width: 100%; max-width: 100%; margin: 0;">
+                <img src="mapa.png" alt="Icon" width="100vh" />
+                <h2>Lista das cidades</h2>
+                <div id="texto13" class="cidades">
+
+                    <div>Águas&nbsp;Claras </div>
+                    <div>Asa&nbsp;Norte</div>
+                    <div>Asa&nbsp;Sul</div>
+                    <div>Brazlândia</div>
+                    <div>Candangolândia</div>
+                    <div>Ceilândia</div>
+                    <div>Cruzeiro</div>
+                    <div>Fercal</div>
+                    <div>Gama</div>
+                    <div>Guará</div>
+                    <div>Itapoã</div>
+                    <div>Jardin&nbsp;Botânico</div>
+                    <div>Lago&nbsp;Norte</div>
+                    <div>Lago&nbsp;Sul</div>
+                    <div>Noroeste</div>
+                    <div>Núcleo&nbsp;Bandeirante</div>
+                    <div>Octogonal</div>
+                    <div>Paranoá</div>
+                    <div>Park&nbsp;Way</div>
+                    <div>Planaltina</div>
+                    <div>Recanto&nbsp;das&nbsp;Emas</div>
+                    <div>Riacho&nbsp;Fundo&nbsp;I</div>
+                    <div>Riacho&nbsp;Fundo&nbsp;II</div>
+                    <div>Samambaia</div>
+                    <div>Santa&nbsp;Maria</div>
+                    <div>São&nbsp;Sebastião</div>
+                    <div>Sia</div>
+                    <div>Sobradinho</div>
+                    <div>Sobradinho&nbsp;II</div>
+                    <div>Sudoeste</div>
+                    <div>Taguatinga</div>
+                    <div>Varjão</div>
+                    <div>Entorno</div>
+                    <div>Val&nbsp;Paraíso</div>
+                    <div>Jardim ingá</div>
+                    <div>Novo Gama</div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+        <section class="animated-element">
+            <h1>Quer receber mais informações?</h1>
+            <h2 class="animated-element">
+                Contate-nos pelo
+                <a href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                    target="_blank">Whatsapp</a>
+            </h2>
+        </section>
+
+        <div class="perguntas animated-element" style="margin-bottom: 10vh">
+            <div class="box animated-element">
+                <h1>Perguntas Frequentes</h1>
+            </div>
+            <div class="box animated-element">
+
+                <p onclick="toggleText('texto8'); rotateArrow('seta1')" style="cursor: pointer">
+                    <img src="seta.png" class="arrow" id="seta1" style="padding: 0 1vh 0 1vh;">
+                    Qual valor dos serviços?
+                </p>
+                <div id="texto8" style="text-align: justify">
+                    <p>
+                        Nós disponibilizamos um profissional até a sua residência para fazer a avaliação com os
+                        equipamentos necessários, todos os nossos profissionais vão ao local, caracterizado com
+                        uniforme, crachá de identificação, após a visita técnica gratuita é passado o valor ao
+                        solicitante.
+                    </p>
+                </div>
+                <p onclick="toggleText('texto9'); rotateArrow('seta2')" style="cursor: pointer">
+                    <img src="seta.png" class="arrow" id="seta2" style="padding: 0 1vh 0 1vh;">
+                    O serviço tem garantia?
+                </p>
+                <div id="texto9" style="text-align: justify">
+                    <p>
+                        Sim. A Precisa pensa muito em seus clientes, além de um atendimento cordial e profissional,
+                        damos a garantia de 90 dias dos nossos serviços.
+                    </p>
+                </div>
+                <p onclick="toggleText('texto10'); rotateArrow('seta3')" style="cursor: pointer">
+                    <img src="seta.png" class="arrow" id="seta3" style="padding: 0 1vh 0 1vh;">
+                    É preciso fazer perfuração ou quebrar alguma parte da casa?
+                </p>
+                <div id="texto10" style="text-align: justify">
+                    <p>
+                        Não! Com os nossos equipamentos mais modernos do mercado, nós conseguimos identificar através de
+                        robôs o local exato da obstrução e utilizamos as máquinas e as técnicas corretas para não
+                        danificar o imóvel.
+                    </p>
+                </div>
+                <p onclick="toggleText('texto11'); rotateArrow('seta4')" style="cursor: pointer">
+                    <img src="seta.png" class="arrow" id="seta4" style="padding: 0 1vh 0 1vh;">
+                    Qual número do suporte da empresa?
+                </p>
+                <div id="texto11" style="text-align: justify">
+                    <p>
+                        Nossa empresa tem o número de suporte <a
+                            href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">(61)9 9425-2500</a>, você pode falar diretamente com o diretor e
+                        deixar a sua avaliação ou a sua sugestão.
+                    </p>
+                </div>
+                <p onclick="toggleText('texto12'); rotateArrow('seta5')" style="cursor: pointer">
+                    <img src="seta.png" class="arrow" id="seta5" style="padding: 0 1vh 0 1vh;">
+                    Onde posso avaliar a empresa?
+                </p>
+                <div id="texto12" style="text-align: justify">
+                    <p>
+                        Após todos os serviços, uma pessoa autorizada da empresa entra em contato com o cliente, nunca
+                        para pedir número de cartão, dinheiro, ou pix, enviamos a ficha de avaliação.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+            target="_blank">
+            <img src="logowppfixa.png" class="whatsapp-button" />
+        </a>
+    </main>
+    <footer>
+        <p>
+            Copyright © 2023 - Precisa Desentupidora<br />
+            Endereço: Rua 40 Quadra 58 Lote 16
+            Brasília-DF CEP 72871-040<br />
+            <br />
+            Telefone:
+            <a href="https://api.whatsapp.com/send?phone=5561994252500&text=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                target="_blank" style="color: black;">
+                <b>+55(61)99425-2500</b></a><br />
+            E-mail:
+            <a href="mailto:Precisa.solucoes@gmail.com?subject=Solicitação%20de%20informações&body=Olá%2C%20gostaria%20de%20obter%20mais%20informações%20sobre%20seus%20serviços."
+                style="color: black;"><b>Precisa.solucoes@gmail.com</b></a>
+        </p>
+    </footer>
+</body>
+
+</html>
